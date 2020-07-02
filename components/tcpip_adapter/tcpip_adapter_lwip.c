@@ -151,10 +151,10 @@ static int tcpip_adapter_ipc_check(tcpip_adapter_api_msg_t *msg)
 
 static esp_err_t tcpip_adapter_update_default_netif(void)
 {
-    if (netif_is_up(esp_netif[TCPIP_ADAPTER_IF_STA])) {
-        netif_set_default(esp_netif[TCPIP_ADAPTER_IF_STA]);
-    } else if (netif_is_up(esp_netif[TCPIP_ADAPTER_IF_ETH])) {
+    if (netif_is_up(esp_netif[TCPIP_ADAPTER_IF_ETH])) {
         netif_set_default(esp_netif[TCPIP_ADAPTER_IF_ETH]);
+    } else if (netif_is_up(esp_netif[TCPIP_ADAPTER_IF_STA])) {
+        netif_set_default(esp_netif[TCPIP_ADAPTER_IF_STA]);
     } else if (netif_is_up(esp_netif[TCPIP_ADAPTER_IF_AP])) {
         netif_set_default(esp_netif[TCPIP_ADAPTER_IF_AP]);
     }
