@@ -52,7 +52,7 @@
 
 [submodule "components/lwip/lwip"]
 	path = components/lwip/lwip
-	url = https://github.com/reseiwe/esp-lwip.git
+	url = https://github.com/rpirsc13/esp-lwip.git
 
 [submodule "components/mqtt/esp-mqtt"]
 	path = components/mqtt/esp-mqtt
